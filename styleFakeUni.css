@@ -1,0 +1,229 @@
+/* criando variáveis com as cores padão */
+
+:root{
+    --Vermelho1_FakeUni: #dc3b3a;
+    --Vermelho2_FakeUni: #b52842;
+
+    --VermelhoEscuro1_FakeUni: #812120;
+    --VermelhoEscuro2_FakeUni: #731313;
+
+    
+    --Roxo_FakeUni: #772445;
+
+    --Azul_FakeUni: #0fadcf;
+
+    --Cinza_FakeUni: #f3f3f3;    
+}
+/* criando variáveis com as cores padão */
+
+/* Resetando valores e definindo display */
+
+html{
+    background-color: var(--Cinza_FakeUni);
+    font-family: Helvetica, sans-serif, Arial;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    border: 0;
+        
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* Resetando valores e definindo display */
+
+/* MOBILE FIRST */
+
+@media (max-width: 414px){
+
+    /* HEADER */
+
+    .FU_Header{
+        width: 100%;
+        background-color:var(--Cinza_FakeUni);
+        box-shadow: 2px 1px 2px rgb(110, 110, 110);
+    }
+
+    .FU_Header ul{
+        /*precisei fixar o height aqui para que a animação dos balões não mecha no tamanho geral da ul, fazendo com que ela 'anime' junto*/
+        height: 62px;
+
+        padding: 1px 8px;
+        margin-top: 3px;
+
+    }
+
+    /* balão e sininho */
+
+    .FU_icone{
+        float: right;
+        position: relative;
+        top: 14px;
+        display: inline;
+        left: 120%;
+        align-items: center;
+    }
+
+    .FU_icone span{
+        position: relative;
+        left: 6px;
+        color: white;
+        font-weight: 600;
+
+    }
+
+    
+    @keyframes icone_msg {
+        0% {width: 20px; height: 20px;}
+        100% {width: 23px; height: 23px; font-size: calc(100% + 10%);}
+        
+    } 
+    
+
+    .FU_icone_msg{
+        z-index: 3;
+        position: relative;
+        bottom: 40px;
+        left: 20px;
+
+
+        background-color: var(--Vermelho1_FakeUni);
+        width: 20px;
+        height: 20px;
+        border-radius: 60%;
+
+        animation-name: icone_msg;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-delay: 0.5s;
+        animation-direction: alternate-reverse;
+        animation-timing-function: ease;
+    }
+
+    /* balão e sininho */
+
+    .FU_LogoSuperior{
+        width: 120px ;
+
+    }
+
+    .FU_perfilAluno_superior_Container{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .FU_perfilAluno_superior_Container p{
+        font-size: 10px;
+
+    }
+
+    .FU_perfilAluno_Foto{
+        width: 30%;
+    }
+    
+    .FU_perfilAluno_Foto img{
+        width: 100%;
+    }
+
+    /* HEADER */
+
+
+
+    /* SECTION */
+
+    .FU_Menu{
+        display: flex;
+    }
+
+    /* SECTION */
+
+    
+
+    .FU_menuLateral{
+        display: flex;
+        overflow: scroll;
+        background-image: linear-gradient(var(--Vermelho1_FakeUni), var(--VermelhoEscuro1_FakeUni));
+        width: 80px;
+        height: 100vh;
+    }
+    .FU_menuLateral ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+
+    .FU_menuLateral li{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 0px ;
+
+    }
+    
+
+    .FU_menuLateral li:hover{
+        background-color: var(--VermelhoEscuro2_FakeUni);
+        box-shadow: 1px 1px 1px black;
+    }
+
+    .FU_menuLateral a{
+        margin: 6px 1px 6px 1px;
+    }
+
+    .FU_menuLateral span{
+        padding: 3px 0px;
+        font-size: 10px;
+        color: white;
+        font-weight: 600;
+    }
+
+
+
+
+
+
+    /* SECTION */
+
+    /* MENU CENTRAL */
+
+    .FU_menuCentral{
+        flex:70%;
+
+        
+        background-color: black;
+        width: 200px;
+        height: 100vh;
+    }
+
+   
+    /* MENU CENTRAL */
+
+
+
+/* MOBILE FIRST */
+
+
+
+}
+
+
